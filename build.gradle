@@ -68,6 +68,7 @@ test {
 
 shadowJar {
     destinationDirectory.set(file("$rootDir/target"))
+    setArchiveFileName("RedisChat-$version-all.jar")
     archiveClassifier.set('')
     dependencies {
         include dependency('com.github.Exlll.ConfigLib:configlib-paper')

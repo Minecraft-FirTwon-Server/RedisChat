@@ -266,7 +266,7 @@ public class ComponentProvider {
             if (p.getInventory().getItemInMainHand().getType().isAir()) {
                 toParseItemComponent = toParseItemComponent.replaceText(rTextBuilder ->
                         rTextBuilder.matchLiteral("%item_name%")
-                                .replacement("Nothing")
+                                .replacement("空气")
                 );
             } else if (itemMeta != null && itemNameProvider.hasItemName(itemMeta)) {
                 toParseItemComponent = toParseItemComponent.replaceText(rTextBuilder ->

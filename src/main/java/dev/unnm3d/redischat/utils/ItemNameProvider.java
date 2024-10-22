@@ -23,13 +23,14 @@ public class ItemNameProvider {
     }
 
     public String getItemName(ItemMeta itemMeta) {
-        if (getItemNameField == null || !useItemName)
-            return itemMeta.getDisplayName();
-        try {
-            return (String) getItemNameField.invoke(itemMeta);
-        } catch (IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException(e);
-        }
+        return itemMeta.getDisplayName();
+//        if (getItemNameField == null || !useItemName)
+//            return itemMeta.getDisplayName();
+//        try {
+//            return (String) getItemNameField.invoke(itemMeta);
+//        } catch (IllegalAccessException | InvocationTargetException e) {
+//            throw new RuntimeException(e);
+//        }
     }
 
     public boolean hasItemName(ItemMeta itemMeta) {
